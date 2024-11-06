@@ -1,11 +1,11 @@
 body{
-    background-color: rgba(192, 139, 35, 0.762);
+    background-color: #ab7230aa;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
 p{
-    color: rgb(165, 42, 85);
+    color: rgb(85, 12, 37);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -15,10 +15,16 @@ strong{
     font-size: 15px;
 }
 h1{
-    color: gray;
+    color: rgb(187, 20, 87);
 }
 ul{
-    color: gold;
+    color: rgb(82, 38, 67);
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
+}
+
+dt{
+    color: rgb(226, 43, 76);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
