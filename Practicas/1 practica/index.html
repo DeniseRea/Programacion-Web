@@ -13,10 +13,19 @@
         <center>
             <h1>Razas de Gatos</h1>
         </center></header>
-        <p>Los gatos son animales fascinantes y existen muchas razas con características únicas. A continuación, se
-            describen algunas razas populares.</p>
 
-        <p>Los gatos han acompañado a los seres humanos durante miles de años y son uno de los animales domésticos 
+        <nav>
+        <!--El span me da paso para usar distintos estilos en un mismo texto-->
+            Home <a href="../2 Practica/Denise.html"> enlace</a>
+        </nav>
+        Buscar: <input type="text" name="buscar" id="buscador">
+        <button id="btnBuscar">Buscar</button>
+        <p>Los gatos son animales <span class="spaaan">fascinantes</span>  y existen muchas razas con características únicas. A continuación, se
+            describen algunas razas populares.</p>
+        
+        <!--em le da un poco de énfasis, podemos usar estilos pero no está 
+        orientada a ello-->
+        <p>Los <em>gatos</em>  han acompañado a los seres humanos durante miles de años y son uno de los animales domésticos 
             más queridos en todo el mundo. Su elegante apariencia, carácter independiente y comportamiento curioso
             los convierten en mascotas fascinantes y adorables. Los gatos no solo son excelentes cazadores, sino que
             también han sido valorados como compañeros leales, aportando tranquilidad y alegría en muchos hogares</p>
@@ -26,9 +35,14 @@
              SELECTOR DE CLASE-->
             <h1 class="destacado">Gato Cálico</h1>
             <center>
-                <a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus" target="_blank"> <img
-                        src="images/calico.jpeg" alt="Imagen de gato Cálico" width="300"> </a>
+                <a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus" target="_blank"> 
+                <figure>
+                    <img src="images/calico.jpeg" alt="Imagen de gato Cálico" width="300"> </a>
+                        <figcaption>Gato</figcaption>
+                    </figure>
             </center>
+
+            <button id="Botoncito"> Boton jiji </button>
             <p>Cuidados para gatos</p>
             <!--Selector de ID, en este caso no se lo puede compartir-->
             <ol id="cuidados">
