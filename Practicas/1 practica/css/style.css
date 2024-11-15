@@ -31,6 +31,10 @@ dt{
 
 footer{
     text-align: center;
+    background-color: #4d1b2b; /* Color de fondo oscuro */
+    color: #e1e5e7; /* Color de texto claro */
+    padding: 15px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .destacado{
@@ -43,7 +47,7 @@ footer{
 
 .container{
     text-align: center;
-    max-width: 800px;
+    max-width: 1100px;
 }
 
 .spaaan{
@@ -55,4 +59,27 @@ footer{
     border-radius: 100px;
     border-color: transparent;
     cursor:pointer;
+}
+
+#instruccion1{
+    width: 300px;
+    background-color: #d0bdbd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(81, 5, 5, 0.1);
+    font-family: Arial, sans-serif;
+    float: right;
+    margin-top: -1500px;
+}
+
+.titulo_Especial{
+    color: rgb(77, 59, 71);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.piecito{
+    color: #ddd;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
