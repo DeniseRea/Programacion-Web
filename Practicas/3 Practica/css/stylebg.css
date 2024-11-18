@@ -1,0 +1,33 @@
+body{
+    /*background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
+
+    background: rgb(200,102,145);
+background: linear-gradient(90deg, rgba(200,102,145,1) 0%, rgba(131,215,219,1) 75%);
+}
+
+/*~ selector tipo atributo ~*/
+input[type="text"]{
+    background-color:transparent;
+    border-bottom: 1px solid #000;
+    border-radius: 5px;
+    color: rgb(10, 53, 39);
+}
+
+input[type="submit"]{
+    background: #752d2d;
+    width: 100px;
+    color: azure;
+}
+
+/* ~Esrto solo se aplica a los placeholder tipo texto ~ */
+input[type="text"]::placeholder{
+    color: #200505;
+}
+
+input{
+    border-radius: 10px;
+    border: 0px;
+    /* desaparecen los bordes*/
+    outline: none;
+}

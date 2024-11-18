@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---
+    <link rel="stylesheet" href="CSS/style.css">-->
+    <link rel="stylesheet" href="CSS/stylebg.css">
+    <title>TABLAS</title>
+
+</head>
+<body>
+     <header id="headerTabla"> tablas</header>
+     <section>
+        <p>
+            Uso de las tablas usando <em>table</em> para el <i>manejo</i> de envío o recibo de información
+            <article>
+                <p> texto fuera de table </p>
+                <table class="tableStyle">
+                    <caption>Aqui puedo colocar un encabezado </caption>
+                    <!--filas tr table row-->
+                    <tr>
+                        <!--Columnas th table header-->
+                        <!--con el colspan, combino dos columnas-->
+                        <th colspan="2">Nombre y Apellido</th>
+                        <!--<th>Apellido </th>-->
+                        <th>Edad </th>
+                    </tr>
+                        <td>Denise </td>
+                        <td>Rea </td>
+                        <td>20 </td>
+                    </td>
+                    <tr>
+                        <td>Belen </td>
+                        <td>Rea </td>
+                        <td>26 </td>
+                    </tr>
+                    <tfoot>
+                        <td>piecito </td>
+                        <td>pie </td>
+                        <td>21 </td>
+                    </tfoot>
+                </table>
+            </article>
+
+
+            <!--Correcta estructura de una tabla-->
+            <article>
+                <!--usando directamente el borde en la tabla-->
+                <table class="tableStyle" frame="hsides" rules="none" border="2" cellpadding="10" cellspacing="5">
+                    <!-- puedo ir modificando el caption como se requiera-->
+                    <caption align="bottom">Lista de Personas </caption>
+                    <!--filas tr table row-->
+                    <!--
+                    <colgroup>
+                        <col>
+                        al no poner ningun estilo en la primera columna, se coloca en la segunda
+                        <col style="width: 500; background-color:red;">
+                    </colgroup>-->
+                    <thead>
+                    <tr>
+                        <th colspan="2" align="center" width="400px">Nombre y Apellido</th>
+                        <th>Edad </th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <td>Denise </td>
+                        <td>Rea </td>
+                        <td>20 </td>
+                    </td>
+                    <tr>
+                        <td>Belen </td>
+                        <td>Rea </td>
+                        <td>26 </td>
+                    </tr>
+                </tbody>
+                    <tfoot>
+                        <td>pie </td>
+                        <td>piecito </td>
+                        <td>21 </td>
+                    </tfoot>
+                </table>
+            </article>
+        </p>
+     </section>
+
+     <section>
+
+<div>
+        <form action="submit" method="get">
+            <label>Nombre: </label><input type="text" id="txt_nombre" placeholder="Nombre">
+            <br>
+            <label>Apellidos: </label><input type="text" id="txt_apellido" placeholder="Apellido">
+            <br>
+            <Label>Contraseña: </Label><input type="password" id="txt_password" placeholder="Password">
+            <br>
+        
+        <label>Seleccione su rol:</label>
+        <br>
+        <button type="button" id="button"> Guardar </button>
+        <select id="combo_Tipo">
+            <option>Estudiante</option>
+            <option>Docente</option>
+            <option>Administrativo</option>
+            <br>
+            <input type="submit"> 
+        </select>
+    </form>
+    </div>
+     </section>
+</body>
+</html>
