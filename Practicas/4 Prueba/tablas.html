@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---
+    <link rel="stylesheet" href="CSS/style.css">-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>TABLAS</title>
+
+</head>
+<body id="bodybrin">
+    <nav id="navBar">
+        <!--Seccion de opciones-->
+        <section id="options">
+        <h1>Tienda virtual</h1>
+        </section>
+        <section id="options">
+        <p class="letrasNav">Inicio </p>
+        <p>Ropa </p>
+        <p>Tecnología </p>
+        <p>Zapatos</p>
+        <p>Contacto</p>
+        </section>
+    </nav>
+
+    <h1> tabla de inventario</h1>
+    <div id="tabla">
+    
+           <article>
+                <!--usando directamente el borde en la tabla-->
+                <table class="tableStyle" frame="hsides" rules="none" border="2" cellpadding="10" cellspacing="5">
+                    <!-- puedo ir modificando el caption como se requiera-->
+                    <caption align="top">inventario Actualizado </caption>
+                    <!--filas tr table row-->
+                    <!--
+                    <colgroup>
+                        <col>
+                        al no poner ningun estilo en la primera columna, se coloca en la segunda
+                        <col style="width: 500; background-color:red;">
+                    </colgroup>-->
+                    <thead>
+                    <tr>
+                        <th>
+                            Producto
+                        </th>
+                        <th> Categoria</th>
+                        <th>Precio </th>
+                        <th> Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <td class="color1">cama </td>
+                        <td class="color1">20 </td>
+                        <td class="color1">2 </td>
+                        <td class="color1"> 3</td>
+                    </td>
+                    <tr>
+                        <td class="color2">Camisa </td>
+                        <td class="color2">Rea </td>
+                        <td class="color2">26 </td>
+                        <td class="color2">20 </td>
+                    </tr>
+                    <tr>
+                        <td class="color1">Camisa </td>
+                        <td class="color1">Rea </td>
+                        <td class="color1">26 </td>
+                        <td class="color1">20 </td>
+                    </tr>
+                    <tr>
+                        <td class="color2">Camisa </td>
+                        <td class="color2">Rea </td>
+                        <td class="color2">26 </td>
+                        <td class="color2">20 </td>
+                    </tr>
+                </tbody>
+
+                </table>
+            </article>
+        </p>
+     </div>
+</body>
+</html>

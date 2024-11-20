@@ -1,0 +1,179 @@
+#login_body{
+    background-image: url(../Images/back.jpeg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#Logiin{
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 10px 20px 10px;
+    margin-top: 200px;
+    margin-left: 600px;
+    margin-right: 600px;
+    border-radius: 15px;
+}
+
+input[type="text"]::placeholder{
+    color: gray;
+}
+
+input{
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    padding-top: 20px;
+}
+
+input[type="password"]
+{
+    background-color:transparent;
+    border-bottom: 1px solid #958383;
+    border-radius: 5px;
+    color: rgb(200, 230, 220);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+input[type="text"]
+{
+    background-color:transparent;
+    border-bottom: 1px solid #958383;
+    border-radius: 5px;
+    color: rgb(200, 230, 220);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button{
+    color: black;
+    outline: none;
+    background: rgb(198,49,49);
+    background: linear-gradient(90deg, rgba(198,49,49,1) 0%, rgba(255,252,119,1) 99%);
+    padding: 15px 30px 15px 30px;
+    border-radius: 22px;
+
+}
+#options{
+    display: flex;
+    justify-content:space-around;
+}
+
+#navBar{
+    background: rgb(10,69,10);
+background: linear-gradient(90deg, rgba(10,69,10,1) 0%, rgba(169,219,131,1) 75%);
+color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#navegarCategorias{
+    background-color: black;
+/*    display: flex;*/
+    color: white;
+    text-align: center;
+    width: 40%;
+    margin-top: 0;
+    padding: 20px;
+
+}
+
+h2{
+    background-color: green;
+    border-radius: 15px;
+    
+}
+
+.foto{
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+
+}
+
+.tienda{
+    background-color: white;
+/*    display: flex;*/
+    padding: 30px;
+    align-content: center;
+}
+
+.articulo{
+    background-color: white;
+    margin-left:30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#bodybrin{
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,235,214,1) 99%);
+}
+
+#categorias{
+    display: flex;
+    margin-left:30px;
+}
+
+.letrastienda{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.Logos{
+    display: flex;
+    justify-content:center
+}
+
+.logo{
+    width: 30px;
+}
+
+aside{
+    background-color: aliceblue;
+    float: right;
+
+}
+
+#tabla{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.tableStyle{
+    margin:0 80vh 0 ;
+}
+thead{
+    background-color: green;
+}
+
+.color1{
+    background-color: white;
+}
+
+.color2{
+    background-color: gray;
+}
+
+#Save{
+    background-color: green;
+}
