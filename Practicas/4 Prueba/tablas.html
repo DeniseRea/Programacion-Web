@@ -3,81 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---
-    <link rel="stylesheet" href="CSS/style.css">-->
     <link rel="stylesheet" href="CSS/style.css">
-    <title>TABLAS</title>
-
+    <title>Tabla de Inventario</title>
 </head>
 <body id="bodybrin">
     <nav id="navBar">
-        <!--Seccion de opciones-->
         <section id="options">
-        <h1>Tienda virtual</h1>
+            <h1>Tienda Virtual</h1>
         </section>
         <section id="options">
-        <p class="letrasNav">Inicio </p>
-        <p>Ropa </p>
-        <p>Tecnología </p>
-        <p>Zapatos</p>
-        <p>Contacto</p>
+            <p class="letrasNav">Inicio</p>
+            <p>Ropa</p>
+            <p>Tecnología</p>
+            <p>Zapatos</p>
+            <p>Contacto</p>
         </section>
     </nav>
 
-    <h1> tabla de inventario</h1>
+    <h1>Tabla de Inventario</h1>
     <div id="tabla">
-    
-           <article>
-                <!--usando directamente el borde en la tabla-->
-                <table class="tableStyle" frame="hsides" rules="none" border="2" cellpadding="10" cellspacing="5">
-                    <!-- puedo ir modificando el caption como se requiera-->
-                    <caption align="top">inventario Actualizado </caption>
-                    <!--filas tr table row-->
-                    <!--
-                    <colgroup>
-                        <col>
-                        al no poner ningun estilo en la primera columna, se coloca en la segunda
-                        <col style="width: 500; background-color:red;">
-                    </colgroup>-->
-                    <thead>
-                    <tr>
-                        <th>
-                            Producto
-                        </th>
-                        <th> Categoria</th>
-                        <th>Precio </th>
-                        <th> Stock</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <td class="color1">cama </td>
-                        <td class="color1">20 </td>
-                        <td class="color1">2 </td>
-                        <td class="color1"> 3</td>
-                    </td>
-                    <tr>
-                        <td class="color2">Camisa </td>
-                        <td class="color2">Rea </td>
-                        <td class="color2">26 </td>
-                        <td class="color2">20 </td>
-                    </tr>
-                    <tr>
-                        <td class="color1">Camisa </td>
-                        <td class="color1">Rea </td>
-                        <td class="color1">26 </td>
-                        <td class="color1">20 </td>
-                    </tr>
-                    <tr>
-                        <td class="color2">Camisa </td>
-                        <td class="color2">Rea </td>
-                        <td class="color2">26 </td>
-                        <td class="color2">20 </td>
-                    </tr>
-                </tbody>
-
-                </table>
-            </article>
-        </p>
-     </div>
+        <table class="tableStyle">
+            <caption>Inventario Actualizado</caption>
+            <colgroup>
+                <col style="width: 40%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cama</td>
+                    <td>Muebles</td>
+                    <td>$200</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Camisa</td>
+                    <td>Ropa</td>
+                    <td>$26</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>Tecnología</td>
+                    <td>$600</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Zapatos</td>
+                    <td>Calzado</td>
+                    <td>$50</td>
+                    <td>50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+<footer>
+    <section>
+        <p>Sobre Nosotros</p>
+    </section>
+    <section> 
+        <p>
+            Somos una tienda virtual en ofrecer emjoras de productos de tecnología
+        </p>
+
+        <p> Síguenos</p>
+        <section class="Logos">
+            <a href="https://github.com/DeniseRea"><img src="Images/github.png" class="logo"></a>
+            <a href="https://github.com/DeniseRea"><img src="Images/twitter.jpeg" class="logo"></a>
+            <a href="https://github.com/DeniseRea"><img src="Images/link.png" class="logo"></a>
+        </section>
+    </section>
+    <a href="tablas.html"><button type="button" id="Inventario"> Ver Tabla de Inventario </button></a>
+
+    <p> Derechos reservados Denise Rea</p>
+</footer>
 </html>
