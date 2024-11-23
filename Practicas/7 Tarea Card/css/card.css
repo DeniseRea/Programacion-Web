@@ -1,0 +1,114 @@
+body{
+    height: 100%;
+    /*background-color: rgba(182, 169, 161, 0.552);*/
+    /*background: rgb(117,117,152);
+background: linear-gradient(90deg, rgba(117,117,152,1) 0%, rgba(181,181,226,1) 40%, rgba(27,27,17,1) 99%);*/
+background: rgb(109,195,236);
+background: linear-gradient(90deg, rgba(109,195,236,1) 0%, rgba(181,197,245,1) 20%, rgba(255,254,254,1) 99%);
+}
+
+*{
+    margin: 0;
+}
+
+.card{
+    /* sombrita */
+    box-shadow: #000 0px 0px 50px;
+    /* que se adapte*/
+    margin: auto;
+    margin-top: 40px;
+    height: 700px;
+    background-color:rgb(5, 1, 20);
+    width:500px ;
+}
+
+.card-header{
+    height: 350px;
+    background-image: url(../images/camiseta.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:65% ;
+    margin: 0 2vh 0;
+    /*se posiciona el texto */
+    position: relative; 
+    overflow: hidden;
+}
+
+.card-header .view_details{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    /* Oculamos el texto */
+    opacity: 0; 
+     /* le da una transición suave */
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.card-header:hover .view_details {
+    /* Muestra el texto al pasar el mouse sisis */
+    opacity: 1; 
+}
+
+h4{
+    color: rgb(112, 106, 106);
+}
+
+.card-content{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 40px;
+    color: rgb(255, 255, 255);
+}
+
+
+.size{
+    margin-top: 50px;
+}
+
+.colors{
+    margin-top: 50px;
+}
+
+.rojo{
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 50%;
+    color: red;
+    width: 10px;
+    height: 10px;
+}
+
+.azul{
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 50%;
+    color: blue;
+    width: 10px;
+    height: 10px;
+}
+
+.blanco{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    width: 10px;
+    height: 10px;
+}
+
+.verde{
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 50%;
+    color: green;
+    width: 10px;
+    height: 10px;
+}
+
