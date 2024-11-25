@@ -5,6 +5,7 @@ body{
 background: linear-gradient(90deg, rgba(117,117,152,1) 0%, rgba(181,181,226,1) 40%, rgba(27,27,17,1) 99%);*/
 background: rgb(109,195,236);
 background: linear-gradient(90deg, rgba(109,195,236,1) 0%, rgba(181,197,245,1) 20%, rgba(255,254,254,1) 99%);
+transition: background 0.5s ease;;
 }
 
 *{
@@ -32,6 +33,7 @@ background: linear-gradient(90deg, rgba(109,195,236,1) 0%, rgba(181,197,245,1) 2
     /*se posiciona el texto */
     position: relative; 
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .card-header .view_details{
@@ -79,10 +81,11 @@ h4{
 .rojo{
     border: 1px solid red;
     background-color: red;
-    border-radius: 50%;
+    border-radius: 100%;
     color: red;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+
 }
 
 .azul{
@@ -112,3 +115,20 @@ h4{
     height: 10px;
 }
 
+.card:hover .card-header {
+    transform: translateX(20px);
+}
+
+.card-content h2:hover {
+    background-color: black;
+    color: red;
+}
+
+.card:hover body {
+    transform: translateX(20px); 
+}
+
+
+.card-content h2:hover ~ body {
+    background: black; 
+}

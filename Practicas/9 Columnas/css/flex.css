@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    background-color: rgb(8, 72, 121);
+}
+
+.container{
+    display: flex;
+    border: 2px solid rgb(255, 255, 255);
+    height: 500px;
+    width: 40%;
+}
+
+.container div{
+    height: 50px;
+
+}
+
+.item1{
+    flex: 0 0 200px;
+    background-color: aqua;
+    /* Propiedades de flex
+        ~ grow: controla como crece un elemento según si espacio disponible
+        ~ shrink: controla como se encoje un elemento cuando falta un espacio
+        ~ basis: define el tamaño inicial antes de que se adapte
+    
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;*/
+}
+
+.item2{
+    flex: 1 1 200px;
+    background-color: rgb(18, 188, 71);
+}
+
+.item3{
+    flex: 1 1 100px;
+    background-color: rgb(109, 248, 146);
+
+}

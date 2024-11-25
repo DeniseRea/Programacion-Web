@@ -1,0 +1,18 @@
+#noticias{
+    width: 500px;
+    padding: 10px;
+    border: 2px solid rgb(70, 5, 17);
+
+    /*
+        Implementando columnas al articulo 
+    */
+
+    column-count: 4;
+    column-gap: 20px;
+    column-rule-style: double;
+    column-rule-color: rgb(175, 103, 139);
+    column-rule-width: 3 px;
+
+    /*puedo aplicar en una sola linea las propiedades*/
+    /*column-rule: 1px solid purple;*/
+}

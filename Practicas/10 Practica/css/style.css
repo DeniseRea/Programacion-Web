@@ -1,0 +1,90 @@
+input[type="text"]::placeholder {
+    color: gray;
+}
+
+input {
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    padding-top: 20px;
+}
+
+#btnl {
+    color: black;
+    outline: none;
+    background: rgb(198, 49, 49);
+    background: linear-gradient(90deg, rgba(198, 49, 49, 1) 0%, rgba(255, 252, 119, 1) 99%);
+    padding: 15px 30px;
+    border-radius: 22px;
+}
+
+#options {
+    display: flex;
+    justify-content: space-around;
+}
+
+#navBar {
+    background: rgb(10, 69, 10);
+    background: linear-gradient(90deg, rgba(10, 69, 10, 1) 0%, rgba(169, 219, 131, 1) 75%);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#bodybrin {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(223, 235, 214, 1) 99%);
+}
+
+#categorias {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.Logos {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 30px;
+}
+
+aside {
+    background-color: aliceblue;
+    padding: 10px;
+    width: 20%;
+    height: 30%;
+    text-align: center;
+    position: static;
+    left: 20%;
+    border-radius: 10px;
+}
+
+#tienda {
+    background-color: aliceblue;
+    padding: 3vh 2vh 3vh;
+}
+
+.articulo1 {
+    display: flex;
+}
+
+.image_responsive {
+    flex: 1 1 200px;
+}
