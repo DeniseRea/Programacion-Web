@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #5f4760;
+    background-color: #f4f4f8;
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(202,96,123);
+    background: radial-gradient(circle, rgba(202,96,123,1) 0%, rgba(245,206,233,1) 43%, rgba(245,206,233,1) 53%);
+    color: black;
+    padding: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .nav-links a:hover {
+    color: #333;
+}
+
+/* Sección hero  */
+.hero {
+    background-color: antiquewhite;
+    color: rgb(17, 17, 17);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Secciones de contenido */
+.content-section {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    margin-bottom: 1rem;
+}
+
+.Logos{
+    display: flex;
+    justify-content:center
+}
+
+.logo{
+    width: 40px;
+    margin: 7px;
+    border-radius: 10%;
+}
+
+
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+
+}
+
+#articulo{
+    background-color: #f4f4f8;
+    
+}
