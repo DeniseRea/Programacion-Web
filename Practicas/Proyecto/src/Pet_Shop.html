@@ -1,67 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Virtual</title>
-    <link rel="stylesheet" href="../CSS/Pet-Shop.css">
-</head>
-<body>
-    <header>
-        Tienda Mascotitas
-    </header>
-    <nav id="nav-petshop">
-        <ul id="list-products">
-            <li>Alimento</li>
-            <li>Farmacia</li>
-            <li>Arena</li>
-            <li>Snacks</li>
-        </ul>
-    </nav>
-   <!--
-    <div>
-        <h1>Tienda </h1>
-            <div class="Table1">
-                <table class="products">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda Virtual</title>
+        <link rel="stylesheet" href="../CSS/Pet-Shop.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            Tienda Mascotitas
+        </header>
+        <nav id="nav-petshop">
+            <ul id="list-products">
+                <li><a href="#food" >Alimento</a></li>
+                <li> <a href="#Farmacy">Farmacia</a></li>
+                <li> <a href="#Arena"> Arena </a></li>
+                <li><a href="#Snacks"> Snacks</a></li>
+                <li> <a href="#Details">Compras </a></li>
+            </ul>
+        </nav>
+
+        <!--Es el contenedor principal, así se puede dividir el nav y las demas secciones -->
+        <div id="main-container">
+            <div class="container">
+                <h1 id="Food"> Alimento</h1>
+                <div class="container-productos">
+                    <div class="container-product">
+                        <img src="../Image/food_perro-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    
+            </div>
+            
+                <!--FARMACIA-->
+            
+            <div class="container">
+                <h1 id="Farmacy"> Farmacia</h1>
+                <div class="container-productos">
+                    <div class="container-product">
+                        <img src="../Image/food_perro-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- ARENA-->
+            
+            <div class="container">
+                <h1 id="Arena"> Arena</h1>
+                <div class="container-productos">
+                    <div class="container-product">
+                        <img src="../Image/food_perro-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    
+            </div>
+            
+                <!--SNACKS-->
+            
+            <div class="container">
+                <h1 id="Snacks"> Snacks</h1>
+                <div class="container-productos">
+                    <div class="container-product">
+                        <img src="../Image/food_perro-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="container-product">
+                        <img src="../Image/pedigree.avif" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            
+            <!--Detalles de las compras-->
+            <div class="purchase-container">
+                <h2 id="Details">Detalles de tu Compra</h2>
+                <table class="purchase-table">
                     <thead>
                         <tr>
                             <th>Producto</th>
                             <th>Descripción</th>
-                            <th>Precio</th>
                             <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="cell-product">
-                                <div class="product-container">
-                                    <img src="../Image/food_perro-removebg-preview.png" class="img-product">
-                                    Pro Can</td>
-                                </div>
+                            <td>Pro Can Adultos</td>
                             <td>Saco de 10 kg para razas medianas</td>
+                            <td>2</td>
                             <td>$20.00</td>
-                            <td>50 unidades</td>
+                            <td>$40.00</td>
+                        </tr>
+                        <tr>
+                            <td>Pedigree Cachorros</td>
+                            <td>Bolsa de 15 kg para cachorros</td>
+                            <td>1</td>
+                            <td>$25.00</td>
+                            <td>$25.00</td>
                         </tr>
                     </tbody>
-                    </table>
-            </article>
-    </div>
-    -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total a Pagar:</td>
+                            <td class="total-amount">$65.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
-    <h1> Alimento</h1>
-<div class="container-productos">
-    <div class="container-product">
-        <img src="../Image/food_perro-removebg-preview.png" class="img-product">
-        <button class="buy-btn">Añadir </button>
-        <div class="container-details">
-            <p class="text-product"> Procan Adultos</p>
-            <p class="price-product">$20.00</p>
+            <section id="buttons-cancel-pay">
+                <button id="pay_"><a href="#login-modal" id="pay_">Pagar</a> </button>
+            <button id="cancel-pay_"> Cancelar compra</button>
+            </section>
         </div>
-    </div>
-    <div class="container-product">
-        <img src="../Image/pedigree.avif" class="img-product">
-        <p class="text-product"> Pedigree Cachorros</p>
-    </div>
-</div>
-</body>
-</html>
+
+        <aside id="aside_">
+            <section class="cart-info">
+                <p >¡Haz agregado 3 items!</p>
+                <!--checar si lo enlazamos al login o a los detalles de la compra-->
+                <button class="pay-btn"> <a href="#Details"> Pagar </a> </button>
+            </section>
+            <img src="../Image/michi-removebg-preview.png" class="aside-image">
+        </aside>
+
+
+        
+
+    <!-- Login -->
+    <div id="login-modal" class="login_">
+        <div class="login-content">
+            <h2>Inicia sesión</h2>
+            <img src="../Image/user2.webp" id="user_image">
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                <!--linkear a la pagina de pago-->
+                <button type="submit"><a href="./Pago.html"> Ingresar</a></button>
+                <button type="submit"><a href="#Details"> Regresar</a></button>
+            </form>
+        </div>
+        </div>
+    </body>
+    </html>
