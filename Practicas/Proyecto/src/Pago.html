@@ -7,112 +7,121 @@
     <link rel="stylesheet" href="../CSS/pago.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-</head>
 <body>
-    <header>
-        Tienda Mascotitas
-    </header>
-    <div id="main-content">
-        <h1>Tus datos</h1>
-        <section id="Datos">
-            <img src="../Image/user2.webp" id="user-img" alt="Imagen de usuario">
-            <p>Nombre</p>
-        </section>
-        
-        <!--Detalles de las compras-->
-        <section class="purchase-container">
-            <h2 id="Details">Resumen de tu Compra</h2>
-            <table class="purchase-table">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Cantidad</th>
-                        <th>Precio Unitario</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pro Can Adultos</td>
-                        <td>Saco de 10 kg para razas medianas</td>
-                        <td>2</td>
-                        <td>$20.00</td>
-                        <td>$40.00</td>
-                    </tr>
-                    <tr>
-                        <td>Pedigree Cachorros</td>
-                        <td>Bolsa de 15 kg para cachorros</td>
-                        <td>1</td>
-                        <td>$25.00</td>
-                        <td>$25.00</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4" class="total-label">Total a Pagar:</td>
-                        <td class="total-amount">$65.00</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-    
-        <!-- Métodos de pago -->
-        <div id="pay-card">
-            <form id="payment-form">
-                <section id="payment-M">
-                    <div class="payment-option">
-                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" >
-                        <label for="credit-card">Tarjeta de Crédito/Débito</label>
-                        <div id="credit-card-details" class="payment-details">
-                            <label for="card-number">Número de Tarjeta:</label>
-                            <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" >
-                            
-                            <label for="expiry-date">Fecha de Expiración:</label>
-                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
-                            
-                            <label for="cvv">CVV:</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="XXX" >
-                        </div>
-                    </div>
-        
-                    <!-- PayPal -->
-                    <div class="payment-option">
-                        <input type="radio" id="paypal" name="payment-method" value="paypal" >
-                        <label for="paypal">PayPal</label>
-                        <div id="paypal-details" class="payment-details">
-                            <label for="paypal-email">Correo Electrónico de PayPal:</label>
-                            <input type="email" id="paypal-email" name="paypal-email" placeholder="tu-email@paypal.com" >
-                        </div>
-                    </div>
-        
-                    <!-- Botón de Enviar -->
-                    <button type="submit"> <a href="#capa-confirmacion">Pagar </a></button>
-                    <button type="submit">Pagar y donar</button>
-                </section>
-            </form>
-        
-            <!-- Tarjeta en movimiento -->
-            <section id="target-img">
-                <section class="face anverso">
-                    <img src="../Image/anverso.png" alt="Anverso">
-                </section>
-                <section class="face reverso"> 
-                    <img src="../Image/reverso.png" alt="Reverso">
-                </section>
+    <input type="checkbox" id="t" class="dark-toggle"/>
+    <label id="dark-label">Dark Mode </label>
+    <div class="content">
+        <header>
+            Tienda Mascotitas
+        </header>
+
+        <div class="main-content">
+            <h1>Tus datos</h1>
+            <section id="Datos">
+                <img src="../Image/user2.webp" id="user-img" alt="Imagen de usuario">
+                <p>Wilson Estrada</p>
             </section>
+            
+            <!-- Detalles de las compras -->
+            <section class="purchase-container">
+                <h2 id="Details">Resumen de tu Compra</h2>
+                <table class="purchase-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pro Can Adultos</td>
+                            <td>Saco de 10 kg para razas medianas</td>
+                            <td>2</td>
+                            <td>$20.00</td>
+                            <td>$40.00</td>
+                        </tr>
+                        <tr>
+                            <td>Pedigree Cachorros</td>
+                            <td>Bolsa de 15 kg para cachorros</td>
+                            <td>1</td>
+                            <td>$25.00</td>
+                            <td>$25.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total a Pagar:</td>
+                            <td class="total-amount">$65.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        
+            <!-- Métodos de pago -->
+            <div id="pay-card">
+                <form id="payment-form">
+                    <section id="payment-M">
+                        <div class="payment-option">
+                            <input type="radio" id="credit-card" name="payment-method" value="credit-card" >
+                            <label for="credit-card">Tarjeta de Crédito/Débito</label>
+                            <section id="images-card">
+                                <img src="../Image/visa.png" class="credit-card-img">
+                                <img src="../Image/mastercard-removebg-preview.png" class="credit-card-img">
+                                <img src="../Image/American_Express_logo_(2018).svg.png" class="credit-card-img">
+                            </section>
+
+                            <div id="credit-card-details" class="payment-details">
+                                <label for="card-number">Número de Tarjeta:</label>
+                                <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" >
+                                
+                                <label for="expiry-date">Fecha de Expiración:</label>
+                                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                                
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="XXX" >
+                            </div>
+                        </div>
+            
+                        <!-- PayPal -->
+                        <div class="payment-option">
+                            <input type="radio" id="paypal" name="payment-method" value="paypal" >
+                            <label for="paypal">PayPal</label>
+                            <div id="paypal-details" class="payment-details">
+                                <label for="paypal-email">Correo Electrónico de PayPal:</label>
+                                <input type="email" id="paypal-email" name="paypal-email" placeholder="tu-email@paypal.com" >
+                            </div>
+                        </div>
+            
+                        <!-- Botón de Enviar -->
+                        <button type="submit"> <a href="#capa-confirmacion">Pagar </a></button>
+                        <button type="submit" id="pay-donate"><a href="./Agradecimiento.html"> Pagar y donar </a></button>
+                    </section>
+                </form>
+            
+                <!-- Tarjeta en movimiento -->
+                <section id="target-img">
+                    <section class="face anverso">
+                        <img src="../Image/anverso.png" alt="Anverso">
+                    </section>
+                    <section class="face reverso"> 
+                        <img src="../Image/reverso.png" alt="Reverso">
+                    </section>
+                </section>
+            </div>
         </div>
 
-    </div>
-
-    <!-- Confirmación -->
-    <div id="capa-confirmacion" class="capa-confirmacion">
-        <section class="confirmacion">
-            <p> Muchas gracias por tu compra, ten un buen día</p>
-            <p> Felices Fiestas </p> 
-            <p> Veterinaria huellitas <i class="fa-solid fa-paw"></i></p> 
-            <button type="submit"><a href="#"> Ok!</a></button>
-        </section>
+        <!-- Confirmación -->
+        <div id="capa-confirmacion" class="capa-confirmacion">
+            <section class="confirmacion">
+                <p> Muchas gracias por tu compra, ten un buen día</p>
+                <p> Felices Fiestas </p> 
+                <p> Veterinaria huellitas <i class="fa-solid fa-paw"></i></p> 
+                <button type="submit"><a href="#"> Ok!</a></button>
+            </section>
+        </div>
     </div>
 </body>
 </html>

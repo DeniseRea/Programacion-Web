@@ -1,10 +1,18 @@
 /* Estilo general */
+
+:root{
+    --body-background-color-Dark: rgba(0, 0, 0, 0.848);
+    --h1-color-Dark:rgba(255, 255, 255, 0.829);
+    --texto-general-color-Dark:rgba(255, 255, 255, 0.921);
+    --purchase-container-color-Dark:rgb(30, 49, 48);
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
+    /*background-color: var(--body-background-color-Dark)*/
 }
 
 header {
@@ -16,7 +24,7 @@ header {
 }
 
 /* Contenido principal */
-#main-content {
+.main-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -26,6 +34,7 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
+    
 }
 
 /* Sección de datos */
@@ -45,7 +54,8 @@ h1 {
 
 #Datos p {
     font-size: 1.2rem;
-    color: #555;
+/*    color: #555;*/
+color: var(--texto-general-color);
 }
 
 #Details {
@@ -57,6 +67,7 @@ h1 {
 /* Tabla de detalles */
 .purchase-container {
     background-color: rgb(213, 235, 234);
+    /*background-color: var(--purchase-container-color);*/
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
@@ -109,10 +120,9 @@ h1 {
     text-align: center;
 }
 
-#pay-card{
+#pay-card {
     display: flex;
     justify-content: center;
-    /*gap: 1vh;*/
     padding: 12vh 0 0;
     flex-wrap: wrap;
 }
@@ -121,8 +131,6 @@ h1 {
 #payment-form {
     display: flex;
     flex-direction: column;
-    /*max-width: 600px;*/
-    min-width: 200px;
     width: 400px;
     margin: 20px auto;
     background-color: #a4dda6;
@@ -175,6 +183,15 @@ h1 {
     outline: none;
 }
 
+.credit-card-img{
+    width: auto;
+    height: 40px;
+}
+
+#images-card{
+    display: flex;
+    justify-content: space-around;
+}
 /* Botones */
 button {
     background-color: #47d37f;
@@ -195,6 +212,15 @@ button {
 button:hover {
     background-color: #10311d;
 }
+
+#pay-donate{
+    background-color: rgba(100, 100, 224, 0.644);
+}
+
+#pay-donate:hover{
+    background-color: rgba(25, 25, 89, 0.973);
+}
+
 
 /* Imagen interactiva */
 #target-img {
@@ -278,4 +304,82 @@ button:hover {
 .confirmacion i {
     color: #ff5722;
     font-size: 24px;
+}
+
+/* ~DARK MODE ~ */
+
+#t{
+    position:relative;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border-radius: 10px;
+
+    top: 143px;
+    left: 1180px;
+}
+
+/* Estilo del checkbox */
+.dark-toggle {
+    position: fixed;
+    width: 40px;
+    height: 20px;
+    appearance: none; /* Elimina el estilo predeterminado */
+    margin: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    outline: none;
+    top: 280px;
+    left: 200px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón dentro del checkbox */
+.dark-toggle::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo cuando el checkbox está marcado */
+.dark-toggle:checked {
+    background-color: #4caf50;
+}
+
+.dark-toggle:checked::before {
+    transform: translateX(20px); /* Desplaza el círculo */
+}
+
+#t:checked ~.content {
+    background-color: var(--body-background-color-Dark);
+}
+
+#t:checked ~.content .main-content h1{    
+    color: var(--h1-color-Dark);
+}
+
+#t:checked ~.content .main-content #Datos p{    
+    color: var(--h1-color-Dark);
+}
+
+#t:checked ~#dark-label {
+    color: var(--h1-color-Dark);
+}
+
+#dark-label{
+    position:relative;
+    width: 200px;
+    height: 20px;
+    margin: 0;
+
+    top: 140px;
+    left: 1200px;
 }

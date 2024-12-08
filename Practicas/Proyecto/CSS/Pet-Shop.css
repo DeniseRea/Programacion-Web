@@ -3,6 +3,7 @@
         margin: 0;
         display: block;
         /*justify-content: space-between;*/
+        font-family: Arial, sans-serif;
         gap: 12px;
     }
 
@@ -54,6 +55,7 @@
         flex: 1;
         position: relative;
         overflow: auto;
+        padding: 0;
     }
 
     /* Contenido principal */
@@ -253,6 +255,10 @@
         border-radius: 5px;
         transition: all 0.3s ease;
         /*width: 250px;*/
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
 
 #pay_ {
