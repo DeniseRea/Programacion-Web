@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="../CSS/Pet-Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav id="nav-principal">
+        <a href="" class="huellita"><i class="fa-solid fa-paw" style="color:  rgb(105, 68, 19);"></i></a>
+        <a href="./home.html">Inicio</a>
+        <a href="">Servicios</a>
+        <a href="#about">Acerca de</a>
+        <a href="../src/contact.html">Contacto</a>
+    </nav>
+    <nav id="nav-petshop">
+        <ul id="list-products">
+            <li><a href="#Food">Alimento <i class="fa-solid fa-bowl-food"></i></a></li>
+            <li> <a href="#Farmacy">Farmacia <i class="fa-solid fa-syringe"></i></a></li>
+            <li> <a href="#Arena"> Arena <i class="fa-solid fa-cat"></i></a></li>
+            <li><a href="#Snacks"> Snacks <i class="fa-solid fa-drumstick-bite"></i></a></li>
+            <!--
+                <li> <a href="#Details">Compras </a></li>-->
+        </ul>
+    </nav>
+
+    <!--Es el contenedor principal, así se puede dividir el nav y las demas secciones -->
+    <div id="main-container">
+        <div class="container">
+            <h1 id="Food"> Alimento</h1>
+            <div class="container-productos">
+                <div class="container-product">
+                    <img src="../Image/food_perro-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Procan Adultos</p>
+                        <p class="price-product">$20.00</p>
+                    </div>
+                </div>
+
+                <div class="container-product">
+                    <img src="../Image/pedigree.avif" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Pedigree Cachorro</p>
+                        <p class="price-product">$40.00</p>
+                    </div>
+                </div>
+                <div class="container-product">
+                    <img src="../Image/alcon-removebg-preview.png" class="img-product">
+
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Alcon Adultos</p>
+                        <p class="price-product">$35.00</p>
+                    </div>
+                </div>
+                <div class="container-product">
+                    <img src="../Image/dog_chow.avif" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Dog Chow Adultos</p>
+                        <p class="price-product">$65.00</p>
+                    </div>
+                </div>
+
+                <div class="container-product">
+                    <img src="../Image/buencan-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Buen Can Adultos</p>
+                        <p class="price-product">$36.00</p>
+                    </div>
+                </div>
+                <div class="container-product">
+                    <img src="../Image/grancat.webp" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Purina Cat </p>
+                        <p class="price-product">$40.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--FARMACIA-->
+
+            <div class="container">
+                <h1 id="Farmacy"> Farmacia</h1>
+                <div class="container-productos">
+
+                    <!--medicina1-->
+                    <div class="container-product">
+                        <img src="../Image/meloxican-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Meloxican</p>
+                            <p class="price-product">$5.00</p>
+                        </div>
+                    </div>
+                <!--medicina2-->
+                <div class="container-product">
+                    <img src="../Image/calcio.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Calcio </p>
+                        <p class="price-product">$15.00</p>
+                    </div>
+                </div>
+            
+            <!--medicina3-->
+                <div class="container-product">
+                    <img src="../Image/shampoo-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Shampoo Antipulgas</p>
+                        <p class="price-product">$13.00</p>
+                    </div>
+                </div>
+
+            <!--medicina4-->
+                <div class="container-product">
+                    <img src="../Image/vitaminas-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Vitaminas Purina</p>
+                        <p class="price-product">$20.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARENA-->
+
+        <div class="container">
+            <h1 id="Arena"> Arena</h1>
+        <!--arena1-->
+            <div class="container-productos">
+                <div class="container-product">
+                    <img src="../Image/arenaabentonite-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Bentonite </p>
+                        <p class="price-product">$33.00</p>
+                    </div>
+                </div>
+            
+
+                <!--arena2-->
+                <div class="container-product">
+                    <img src="../Image/arenanutrapro-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Nutra Pro</p>
+                        <p class="price-product">$36.00</p>
+                    </div>
+                </div>
+
+                <!--arena3-->
+                <div class="container-product">
+                    <img src="../Image/arenapremium-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Premium </p>
+                        <p class="price-product">$35.00</p>
+                    </div>
+                </div>
+
+                <!--arena4-->
+                <div class="container-product">
+                    <img src="../Image/arenasuki-removebg-preview.png" class="img-product">
+                    <button class="buy-btn">Añadir </button>
+                    <div class="container-details">
+                        <p class="text-product"> Skoon </p>
+                        <p class="price-product">$40.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--SNACKS-->
+
+            <div class="container">
+                <h1 id="Snacks"> Snacks</h1>
+                <div class="container-productos">
+                    
+                    <!--snack1-->
+                    <div class="container-product">
+                        <img src="../Image/snack2.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+
+                    <!--snack2-->
+                    <div class="container-product">
+                        <img src="../Image/snack1.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+
+                    <!--snack3-->
+                    <div class="container-product">
+                        <img src="../Image/snack3-removebg-preview.png" class="img-product">
+                        <button class="buy-btn">Añadir </button>
+                        <div class="container-details">
+                            <p class="text-product"> Procan Adultos</p>
+                            <p class="price-product">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Detalles de las compras-->
+            <div class="purchase-container">
+                <h2 id="Details">Detalles de tu Compra</h2>
+                <table class="purchase-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pro Can Adultos</td>
+                            <td>Saco de 10 kg para razas medianas</td>
+                            <td>2</td>
+                            <td>$20.00</td>
+                            <td>$40.00</td>
+                        </tr>
+                        <tr>
+                            <td>Pedigree Cachorros</td>
+                            <td>Bolsa de 15 kg para cachorros</td>
+                            <td>1</td>
+                            <td>$25.00</td>
+                            <td>$25.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="total-label">Total a Pagar:</td>
+                            <td class="total-amount">$65.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <section id="buttons-cancel-pay">
+                <button id="pay_"><a href="#login-modal" id="pay_">Pagar</a> </button>
+                <button id="cancel-pay_"> Cancelar compra</button>
+            </section>
+        </div>
+    </div>
+
+    <aside id="aside_">
+        <section class="cart-info">
+            <p>¡Haz agregado 3 items!</p>
+            <!--checar si lo enlazamos al login o a los detalles de la compra-->
+            <button class="pay-btn"> <a href="#Details"> Ver </a> </button>
+        </section>
+        <img src="../Image/michi-removebg-preview.png" class="aside-image">
+    </aside>
+
+
+    <!-- Login -->
+    <div id="login-modal" class="login_">
+        <div class="login-content">
+            <h2>Inicia sesión</h2>
+            <img src="../Image/user2.webp" id="user_image">
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                <!--linkear a la pagina de pago-->
+                <button type="submit"><a href="./Pago.html"> Ingresar</a></button>
+                <button type="submit"><a href="#Details"> Regresar</a></button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Veterinaria Huellitas. Todos los derechos reservados.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
