@@ -39,7 +39,6 @@ function agregarNotas(estudiantes) {
         [14, 13, 15],  
         [10, 9, 11]    
     ];
-
     for (let i = 0; i < estudiantes.length; i++) {
         estudiantes[i].calificaciones = notas[i];
     }
@@ -102,11 +101,8 @@ function Promedios_(estudiantes) {
         }
     }
 
-    console.log("Estudiante con el mejor promedio:");
-    console.log(mejorEstudiante.nombre, "- Promedio:", mejorEstudiante.promedio);
-
-    console.log("Estudiante con el peor promedio:");
-    console.log(peorEstudiante.nombre, "- Promedio:", peorEstudiante.promedio);
+    console.log("Estudiante con el mejor promedio:"+ mejorEstudiante.nombre, "con un promedio de "+ mejorEstudiante.promedio);
+    console.log("Estudiante con el peor promedio:"+ peorEstudiante.nombre, " con un promedio de "+ peorEstudiante.promedio);
 }
 
 function Imprimir_Datos(estudiante) {
@@ -131,5 +127,5 @@ function imprimirInformacionEstudiantes(estudiantes) {
 agregarNotas(estudiantes);
 clasificarEstudiantes(estudiantes);
 calcularMaxMin(estudiantes);
-const resultado = Promedios_(estudiantes);
 imprimirInformacionEstudiantes(estudiantes);
+Promedios_(estudiantes);
