@@ -31,8 +31,8 @@ const llamar_Funciones = function () {
         let promedio= calculaPromedio(a, b, c);
         let mayor= determinarMayor(a, b);
         let par= esPar(5);
-        console.log("Promedio:", promedio);
-        console.log("Mayor:", mayor);
+        console.log("Promedio:"+promedio);
+        console.log("Mayor:"+ mayor);
         console.log("Paridad de "+a + par);
     }
 };
