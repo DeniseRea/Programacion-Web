@@ -92,3 +92,17 @@ for (let key in inventario) {
     let producto = inventario[key];
     console.log(`${producto.nombre}: Precio - $${producto.precio}, Cantidad - ${producto.cantidad}`);
 }
+
+vender_("p1", 15);
+vender_("p2", 230);
+vender_("p3", 100);
+vender_("p4", 50);
+
+aplicarDescuento(100);
+
+console.log("Inventario final:");
+for (let key in inventario) {
+    let producto = inventario[key];
+    console.log(`${producto.nombre}: Precio - $${producto.precio}, Cantidad - ${producto.cantidad}`);
+}
+

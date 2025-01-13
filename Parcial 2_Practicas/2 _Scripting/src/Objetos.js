@@ -116,6 +116,11 @@ function Persona_(nombre,edad,email){
     }
 }
 
+function Gato_(nombre, raza){
+    this.nombre=nombre;
+    this.raza=raza;
+}
+
 const persona4=new Persona_("Daniel",22,"daarmas10@espe.edu.ec");
 persona4.saludos();
 
@@ -198,3 +203,178 @@ console.log(personaArray);
 let personaString =JSON.stringify(add);
 
 console.log(personaString);
+
+
+/**
+ * 10/1/2025
+ */
+
+/***
+ * @method get
+ * acceder a los valores de la propiedad
+ */
+
+let personaGet={
+    nombre:'Denise',
+    apellido:'Rea',
+    edad:22,
+    email:'dnrea@gmail.com',
+    get nombreCompleto(){ //ya no es una propiedad, ahora es un metodo get
+        return this.nombre+' '+this.apellido;
+    }
+}
+
+console.log(personaGet.nombreCompleto);
+
+//set me modifica los valores de los atributos
+
+//validacion 
+
+let PersonaSet={
+    nombre:'Denise',
+    apellido:'Rea',
+    edad:22,
+    email:'dnrea@gmail.com',
+    idioma:'es',
+    get lang(){
+        return this.idioma.toUpperCase();//con UpperCase lo hago mayus
+    },
+    get nombreCompleto(){
+        return this.nombre+' '+this.apellido;
+    }
+}
+
+console.log(PersonaSet.lang);
+
+let PersonaSet_={
+    nombre:'Denise',
+    apellido:'Rea',
+    edad:22,
+    email:'dnrea@gmail.com',
+    idioma:'es',
+    get lang(){
+        return this.idioma.toUpperCase();//con UpperCase lo hago mayus
+    },
+
+    set lang(lang){
+        this.idioma=lang.toUpperCase();
+    },
+
+    get nombreCompleto(){
+        return this.nombre+' '+this.apellido;
+    }
+}
+
+console.log(PersonaSet_.lang);
+PersonaSet_.lang='en';
+console.log(PersonaSet_.lang);
+PersonaSet_.lang='fr';
+
+//Constructores en Javascript
+
+//si se desea crear más objetos del mismo tipo, no es posible
+/**
+ * let PersonaSet={
+    nombre:'Denise',
+    apellido:'Rea',
+    edad:22,
+    email:'dnrea@gmail.com',
+    idioma:'es',
+    get lang(){
+        return this.idioma.toUpperCase();//con UpperCase lo hago mayus
+    },
+    get nombreCompleto(){
+        return this.nombre+' '+this.apellido;
+    }
+}
+
+    Por esta razón se crean cosntructores
+    esta es una funcion especial que me permite trabajar con objetos JS 
+ */
+
+    function PersonaFC( nombre, apellido, email){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email; 
+    }
+
+    let padre= new PersonaFC("Eduardo","Rea",'esegundo@ejemplo.com'); //Variable qu eme permite crear objets del tipo persona
+    console.log(padre);
+    padre.mascota="Julian";
+
+    let madre=new PersonaFC("Lucia","Diaz",'blucia@ejemplo.com');
+    console.log(madre);
+
+    /**
+     * Agregar metodos a una funcion constructora
+     */
+
+    function PersonaFCM( nombre, apellido, email){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email; 
+
+        this.nombreCompleto=function(){
+            return this.nombre+' '+this.apellido;
+        }
+    }
+
+    let hermana=new PersonaFCM("Belen","Rea","berea@ejemplo.com");
+    console.log(hermana.nombreCompleto());
+    //hermana.mascota="Julian";
+
+    let hermana2= new PersonaFCM("Majo","Rea","mjrea@ejemplo.com");
+    hermana2.mascota="Julian";
+    hermana2.nombre_Mascota=function(){
+        return this.mascota;
+    }
+    console.log(hermana2.nombre_Mascota());
+
+
+    /**
+     * @param prototype
+     * Uso de prototipos
+     */
+
+    PersonaFCM.prototype.tel='1234588';
+    console.log(hermana2.tel);
+
+    /**
+     * @param call
+     * Uso del método Call
+     */
+
+    let PersonaC1={
+        nombre:'Denise',
+        apellido:'Rea',
+        nombreCompleto:function(){
+            return this.nombre+' '+this.apellido;
+        }
+    }
+
+    let PersonaC2={
+        nombre:'Christopher',
+        apellido:'Iza',
+    }
+
+    //Para usar el metodo nombreCompleto que pertenece al objeto personaC1 con los datos de la personaC2
+    console.log(PersonaC1.nombreCompleto());
+    console.log(PersonaC1.nombreCompleto.call(PersonaC2));
+
+    //pasar argumentos o parametros a call, hace lo siguiente.
+
+    let PersonaCP1={
+        nombre:'Denise',
+        apellido:'Rea',
+        nombreCompleto:function(titulo,tel){
+            return titulo+' '+this.nombre+' '+this.apellido+' '+tel;
+        }
+    }
+
+    let personaCP2={
+        nombre:'Wilson',
+        apellido:'Cedeño',
+    }
+
+    console.log(PersonaCP1.nombreCompleto('Lic',123456));
+    console.log(PersonaCP1.nombreCompleto.call(personaCP2,'Ing',9856236));
