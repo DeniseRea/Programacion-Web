@@ -378,3 +378,32 @@ PersonaSet_.lang='fr';
 
     console.log(PersonaCP1.nombreCompleto('Lic',123456));
     console.log(PersonaCP1.nombreCompleto.call(personaCP2,'Ing',9856236));
+
+    /**
+     * métodos estáticos
+     * 
+     */
+
+    class Calculadora {
+        static sumar(a,b){
+            return a+b;
+        }
+    }
+    
+    console.log(Calculadora.sumar(3,4)); //no se puede acceder desde una instania
+    
+    const c = new Calculadora();
+    console.log(c.sumar(3,4)); //no se puede acceder desde una instania
+    
+    class Contador{
+        static totalInstancias = 0;
+    
+        constructors(){
+            Contador.totalInstancias++;
+        }
+    
+        static mostrarInstancias =(){
+        return `se ha creado+${Contador.totalInstancias}`;
+        }
+    }
+    
