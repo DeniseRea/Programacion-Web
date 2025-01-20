@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JS</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo DOM con JS</h1>
+    <button type="button" onclick="mostrar()">Mostrar</button>
+
+    <br>
+    <img id="imagen" src="gatos.jpg" alt="imagen" width="300">
+    <script>
+        /**
+            Tener cuidado con el .write porque me sorbreescribe todo el documento
+        **/
+        /*document.write('Saludos Write!');
+        function mostrar(){
+            document.write('Adios Write!');
+        }*/
+
+        function mostrar() {
+            document.getElementById('titulo').innerHTML = "Nuevo titulo";
+            document.getElementById('imagen').src = 'gatito_nocturno.jpg';
+        }
+
+        /**
+         * Crear una funcion que permita el cambio de una imagen cada 2 a 3 segundos
+         * setInterval
+         * setTimeout
+         * a 5 imagenes 
+         */
+
+        const imagenes = [
+            'siames.jpeg',
+            'gatito_nocturno.jpg',
+            'calico.jpeg',
+            'Gatos.jpg',
+            'persa.jpeg'
+        ];
+
+        let indice = 0;
+
+        function cambiarImagen() {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById('imagen').src = imagenes[indice];
+        }
+
+        setInterval(cambiarImagen, 3000); 
+    </script>
+</body>
+</html>

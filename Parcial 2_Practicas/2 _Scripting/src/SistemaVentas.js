@@ -57,7 +57,8 @@ class Producto {
     }
 
     toString() {
-        return `${this._nombre}: $${this._precio}`;
+        return `${this._nombre}:$${this._precio}`;
+
     }
 }
 
@@ -90,7 +91,7 @@ class Orden {
             for (let producto of this.productos) {
                 let precio = producto.getPrecio();
                 if (producto.getCategoria() === 'electronica') {
-                    precio *= 0.9; // Aplicar descuento del 10%
+                    precio *= 0.9; 
                 }
                 totalVenta += precio;
             }
@@ -111,10 +112,10 @@ class Orden {
     }
 
     mostrarOrden() {
-        let productosOrden = '';
-            for (let producto of this.productos) {
-                productosOrden += producto.toString() + ' ';
-        }
+    let productosOrden = '';
+    this.productos.forEach((producto, index) => {
+        productosOrden += `${index + 1}. ${producto.toString()}`;
+    });
 
         console.log(`Orden: ${this._idOrden}, Total: ${this.calcularTotal()}, Productos: ${productosOrden}`);
         console.log(`Impuestos: ${O1.calcularImpuestos()}`);
@@ -124,7 +125,7 @@ class Orden {
 
 let p1 = new Producto('zapatos', 200, 'ropa', 10);
 let p2 = new Producto('vestido', 300, 'ropa', 5);
-let p3 = new Producto('televisor', 1000, 'electronica', 2);
+let p3 = new Producto('televisor', 1000, 'electronica', 5);
 let p4 = new Producto('sofá', 1500, 'hogar', 3);
 let p5 = new Producto('mesa', 700, 'hogar', 4);
 let p6 = new Producto('detergente', 50, 'limpieza', 20);

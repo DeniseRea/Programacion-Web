@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS</title>
+    <style>
+        .azul{
+            color:blue;
+        }
+
+        .rojo{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="cabecera" class="azul">EJEMPLO DOM JS</h1>
+        <p id="parrafo" class="azul"> Saludos!</p>
+        <p id="parrafo1"  class="rojo"> Parrafo 1!</p>
+        <p id="parrafo2"class="azul"> Parrado 2!</p>
+    </header>
+    <script>
+        // getElementById
+
+        /*let cabecera=document.getElementById('cabecera');
+        console.log(`valor cabecera:${cabecera.innerHTML}`); //otra forma convirtiendo a template 
+        let parrafo=document.getElementById('parrafo');
+        console.log(parrafo.innerHTML);
+
+        //cambiar el valor usando innerHTML
+        parrafo.innerHTML='Nuevo valor del parrafo';
+        console.log(parrafo.innerHTML);
+        console.log(parrafo);
+        //console.log("Saludos desde JS");*/
+
+
+        /* getElementbyTagName*/
+        /*
+        let parrafos= document.getElementsByTagName('p');
+        /*console.log(`Nro de parrafos ${parrafos.length}`);
+
+        for(const elements of parrafos){
+            console.log(elements.innerHTML);
+        }*/
+
+        //getElementByClassName
+
+        /*let parrafos=document.getElementsByClassName("azul");
+        console.log(`Nro de parrafos azules ${parrafos.length}`);
+
+        for(const elements of parrafos){
+            console.log(elements.innerHTML);
+        }*/
+
+        /* querySelectoAll */
+        //quiero todos los elementos tipo h1 que tengan la clase azul
+        let elementos=document.querySelectorAll('#cabecera');
+        console.log(`Nro de elementos ${elementos.length}`);
+
+        for(const elements of elementos){
+            console.log(elements.innerHTML);
+        }
+    </script>
+</body>
+</html>
