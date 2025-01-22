@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eventos.css">
+    <title>Eventos JS</title>
+</head>
+<body>
+    <h1 id="titulo"> Taller Eventos JS Densie Rea </h1>
+    <button id="panel_config">Panel de Configuración</button>
+    <div id="configPanel">
+        <form id="configForm">
+            <label >Título de la página:</label>
+
+            <input type="text" id="nuevoTitulo"><br><br>
+            <label for="color_pagina">Color de fondo de pantalla:</label>
+            <input type="color" id="color_pagina" name="color_pagina"><br><br>
+            <label >Habilitar comentarios:</label>
+            <input type="checkbox" id="activar_comentarios" ><br><br>
+        </form>
+    </div>
+    <div id="commentsArea">
+        <h3>Comentarios</h3>
+        <textarea rows="4" cols="50"></textarea>
+    </div>
+    <ul id="itemList">
+        <li class="item">Linea 1</li>
+        <li class="item">Linea 2</li>
+        <li class="item">Lineaaa 3</li>
+    </ul>
+    <script>
+        document.getElementById('panel_config').addEventListener('click', function() {
+            var configPanel = document.getElementById('configPanel');
+            if (configPanel.style.display === 'none') {
+                configPanel.style.display = 'block';
+            } else {
+                configPanel.style.display = 'none';
+            }
+        });
+
+        document.getElementById('nuevoTitulo').addEventListener('input', function() {
+            document.getElementById('titulo').textContent = this.value;
+        });
+
+        document.getElementById('color_pagina').addEventListener('input', function() {
+            document.body.style.backgroundColor = this.value;
+        });
+
+        document.getElementById('activar_comentarios').addEventListener('change', function() {
+            var commentsArea = document.getElementById('commentsArea');
+            if (this.checked) {
+                commentsArea.style.display = 'block';
+            } else {
+                commentsArea.style.display = 'none';
+            }
+        });
+
+        document.getElementById('itemList').addEventListener('click', function(event) {
+            if (event.target && event.target.matches('li.item')) {
+                event.target.remove();
+            }
+        });
+    </script>
+</body>
+</html>

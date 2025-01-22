@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo Eventos con Javascript</title>
+</head>
+<body onload="entrar()">
+    <!--el this asocia todo el elemento en sí, así se crea un evento en una misma etiqueta-->
+    <h1 id="titulo" onclick="this.innerHTML='Nuevo Titulo'"> Evento Onclick()</h1>
+    <h1 id="titulo2" onclick="cambiarTexto(this)">Evento Onclick</h1>
+    <h1 id="titulo3">Evento Onclick</h1>
+    <br>
+    <script>
+        function cambiarTexto(titulo2){
+            console.log(titulo2);
+            titulo2.innerHTML='Cambiamos texto';
+
+            document.getElementById('titulo3').onclick=cambiarTexto1;
+            //estamos haciendo referencia, no estamos llamando a la funcion, es una funcion 
+            //tipo callback
+            //se trabaja de forma dinámica
+
+            function cambiarTexto1(){
+                document.getElementById('titulo3').innerHTML = 'un nuevo titulo';
+            }
+        }
+    </script>
+
+
+    <!--Elemento Onload-->
+    <!--se ejecuta cuando se acaba de cagar la pagina-->
+    <h1 id="titulo 4" Evento Onload></h1>
+    <div id="mostrar">
+
+    </div>
+    <script>
+        function entrar(){
+            alert('Entrando a la pagina web');
+        }
+
+        //Manejo de cookies
+        // son archivos que guardan informacion cuadno se accede a la pagina web
+        //validar un formato denominado llave y valor (llave, valor)
+
+        let texto='';
+        if(navigator.cookieEnabled){
+            texto='cookies están habilidtadas ';
+        }else{
+            texto='cookies no están habilitadas';
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+
+    </script>
+
+    <!---Evento Onchange-->
+    <h1 id="titulo5">Evento Onchange</h1>
+    <br>
+    Nombre: <input type="text" id="nombre" onchange="convertir(this)">
+    <script>
+        function convertir(nombre){
+            nombre.value = nombre.value.toUpperCase();
+        }
+    </script>
+
+    <!--Evento onMousseOver y OnMouseOut-->
+    <h1 id="titulo6" onmousedown="rojo(this)" onmouseup="azul(this)">Evento OnmouseOut</h1>
+    <br>
+    <script>
+        function rojo(titulo6){
+            titulo6.style.color='red';
+        }
+
+        function azul(titulo6){
+            titulo6.style.color='blue';
+        }
+    </script>
+
+    <!--Evento OnmouseDown y OnmpuseUp-->
+    <h1 id="titulo6" onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">Evento OnmouseOut</h1>   
+    <br>
+    <script>
+        function rojo(titulo6){
+            titulo6.style.color='red';
+        }
+
+        function azul(titulo6){
+            titulo6.style.color='blue';
+        }
+
+        function verde(titulo6){
+            titulo6.style.color='green';
+        }
+    </script>
+
+
+    <!-- Evento onfocus y Onblur-->
+     <h2>Onfocus y Onblur</h2>
+    Nombre: <input type="text"  onfocus="cambiar(this)" onblur="regresar(this)">
+    Apellido: <input type="text"onfocus="cambiar(this)" onblur="regresar(this)">
+    <br>
+    <br>
+    <script>
+        function cambiar(elementInput){
+            elementInput.style.backgroundColor='yellow';
+            
+        }
+
+        function regresar(elementInput){
+            elementInput.style.backgroundColor='red';
+        }
+    </script>
+
+    <h2> elemento addlistener</h2>
+    Nombre: <input type="text" id="nombre">
+    <br>
+    Apellido: <input type="text" id="apellido">
+
+    <script>
+        document.getElementById('nombre').addEventListener('click',cambiar);
+        document.getElementById('apellido').addEventListener('blur',regresar);
+        function cambiarTexto1(){
+            document.getElementById('titulo3').innerHTML = 'un nuevo titulo';
+        }
+
+        function entrar() {
+            console.log("Página cargada");
+        }
+
+        function regresar(evento){
+            let componente = evento.target;
+            componente.style.backgroundColor = 'blue';
+        }
+    </script>
+
+
+
+</body>
+</html>
