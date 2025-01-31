@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+}
+
+header{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+#contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#noticias_lista{
+    display: flex;
+    justify-content:center;
+    background-color: aliceblue;
+    margin: center;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    width: 30%;
+}
+
+#form{
+    margin: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body{
+    background-image: url(../image/mundo.jpg);
+    background-size: 1800px;
+}

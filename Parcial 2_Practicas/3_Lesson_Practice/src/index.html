@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>First aplication</title>
+</head>
+<body>
+    <header>
+        NOTICIAS DEL DÍA
+    </header>
+
+    <div id="contenedor">
+    <div id="noticias_lista">
+        <ul id="lista_noticias">
+            <li class="noticia">
+                <h2>Campañas presidenciales</h2>
+                <p>Conoce a los candiatos para este 9 de febrero </p>
+            </li>
+            <li class="noticia">
+                <h2>Coronavirus</h2>
+                <p>Se confirma el primer caso en México</p>
+            </li>
+            <li class="noticia">
+                <h2>Deportes</h2>
+                <p>El equipo de futbol de la UNAM gana su primer partido</p>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="form">
+    <form id="agregar_noticias">
+        <label>Título</label>
+        <br>
+        <input type="text" id="titulo">
+        <br>
+        <label>Noticia detallada</label>
+        <br>
+        <textarea id="nueva_noticia"></textarea>
+        <button type="submit">Agregar noticia</button>
+    </form>
+</div>
+</div>
+    <script>
+        // Obtener el formulario por su ID
+        const form = document.getElementById('agregar_noticias');
+        const noticias=document.getElementsByClassName('noticia');
+        // Agregar un evento 'submit' al formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+            addNotice(); // Llamar a la función para agregar la noticia
+            document.getElementById('titulo').value = ''; // Limpiar el campo de título
+            document.getElementById('nueva_noticia').value = ''; // Limpiar el campo de noticia
+        });
+
+
+        // Función para agregar una noticia
+        function addNotice() {
+            const titulo = document.getElementById('titulo').value;
+            const noticia = document.getElementById('nueva_noticia').value;
+            const ul = document.getElementById('lista_noticias');
+            const li = document.createElement('li');
+            li.className('noticia');
+            const h2 = document.createElement('h2');
+            const p = document.createElement('p');
+            h2.textContent = titulo;
+            p.textContent = noticia;
+            li.appendChild(h2);
+            li.appendChild(p);
+            ul.appendChild(li);
+            
+            // Agregar eventos 'mouseover' y 'mouseout' a la nueva noticia
+            li.addEventListener('mouseover', function(event) {
+                event.target.style.backgroundColor = 'blue';
+            });
+            li.addEventListener('mouseout', function(event) {
+                event.target.style.backgroundColor = '';
+            });
+        }
+
+        // Evento onfocus y onblur para los campos de entrada
+        document.getElementById('titulo').addEventListener('focus', function(event) {
+            event.target.style.backgroundColor = 'yellow';
+        });
+
+        document.getElementById('titulo').addEventListener('blur', function(event) {
+            event.target.style.backgroundColor = '';
+        });
+
+        document.getElementById('nueva_noticia').addEventListener('focus', function(event) {
+            event.target.style.backgroundColor = 'yellow';
+        });
+
+        document.getElementById('nueva_noticia').addEventListener('blur', function(event) {
+            event.target.style.backgroundColor = '';});
+
+            Array.from(noticias).forEach(function(noticia) {
+            noticia.addEventListener('mouseover', function(event) {
+                event.target.style.backgroundColor = 'blue';
+            });
+            noticia.addEventListener('mouseout', function(event) {
+                event.target.style.backgroundColor = '';
+            });
+
+            noticia.addEventListener('dblclick', function(event) {
+                event.target.remove();
+            });
+        });
+    </script>
+        
+</body>
+</html>

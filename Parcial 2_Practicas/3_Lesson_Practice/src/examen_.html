@@ -1,0 +1,88 @@
+<!--Una biblioteca digital necesita mejorar su sistema de gestión de préstamos y devoluciones de libros. 
+Actualmente, los usuarios pueden buscar libros, pero no hay una forma eficiente de reservarlos, 
+devolverlos o verificar su disponibilidad en tiempo real. Además, el sistema no cuenta con alertas 
+para recordar a los usuarios la fecha de devolución ni notificaciones sobre la disponibilidad de libros reservados
+Se requiere que los estudiantes analicen y propongan una solución para mejorar el sistema de gestión 
+de la biblioteca digital, aplicando los conceptos de JavaScript aprendidos en clase. En su análisis, 
+deberán considerar lo siguiente: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <script>
+        // Crear un objeto libro
+        function Libro(titulo, autor, genero, fechaPublicacion, estado) {
+            this.titulo = titulo;
+            this.autor = autor;
+            this.genero = genero;
+            this.fechaPublicacion = fechaPublicacion;
+            this.estado = estado;
+        }
+
+        // Crear un objeto usuario
+        function Usuario(nombre, apellido, email, telefono) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.email = email;
+            this.telefono = telefono;
+        }
+
+        // Crear un objeto prestamo
+        function Prestamo(usuario, libro, fechaPrestamo, fechaDevolucion) {
+            this.usuario = usuario;
+            this.libro = libro;
+            this.fechaPrestamo = fechaPrestamo;
+            this.fechaDevolucion = fechaDevolucion;
+        }
+
+        // Crear un objeto biblioteca
+        function Biblioteca() {
+            this.libros = [];
+            this.usuarios = [];
+            this.prestamos = [];
+        }
+
+        // Crear un método para agregar un libro
+        Biblioteca.prototype.agregarLibro = function(libro) {
+            this.libros.push(libro);
+        }
+
+        // Crear un método para agregar un usuario
+        Biblioteca.prototype.agregarUsuario = function(usuario) {
+            this.usuarios.push(usuario);
+        }
+
+        // Crear un método para prestar un libro
+        Biblioteca.prototype.prestarLibro = function(usuario, libro, fechaPrestamo, fechaDevolucion) {
+            var prestamo = new Prestamo(usuario, libro, fechaPrestamo, fechaDevolucion);
+            this.prestamos.push(prestamo);
+            libro.estado = 'prestado';
+        }
+
+        // Crear un método para devolver un libro
+        Biblioteca.prototype.devolverLibro = function(libro) {
+            for (var i = 0; i < this.prestamos.length; i++) {
+                if (this.prestamos[i].libro === libro) {
+                    this.prestamos.splice(i, 1);
+                    libro.estado = 'disponible';
+                    break;
+                }
+            }
+        }
+
+        // Crear un método para verificar la disponibilidad de un libro
+        Biblioteca.prototype.verificarDisponibilidad = function(libro) {
+            return libro.estado === 'disponible';
+        }
+
+    
+
+    </script>
+
+</body>
+</html>
